@@ -1,0 +1,151 @@
+/* Universal Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    color: #282c34;
+    font-family: Arial, sans-serif;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+/* Main Container */
+.container {
+    text-align: center;
+    border-radius: 15px;
+    padding: 20px;
+    background-color: #282c34;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+body.dark-mode .container {
+    background-color: #ffffff;
+}
+
+/* h2 Styling */
+h2 {
+    font-size: 3rem; 
+    font-weight: bold;
+    color: #ffffff;
+    transition: color 0.3s;
+    margin-bottom: 10px; 
+}
+
+/* Dark Mode for h2 */
+body.dark-mode h2 {
+    color: #282c34; 
+}
+
+/* Clock Container */
+.clock-container {
+    padding: 15px;
+    background-color: #ffffff;
+    color: #282c34;
+    border-radius: 15px;
+    margin-top: 10px;
+}
+
+
+.clock {
+    font-size: 5rem;
+    letter-spacing: 2px;
+}
+
+#date {
+    margin-top: 10px;
+    font-size: 1.5rem;
+    color: #666666;
+}
+
+/* Dark Mode */
+body.dark-mode {
+    background-color: #282c34;
+    color: #ffffff;
+}
+
+body.dark-mode .clock-container {
+    background-color: #282c34;
+    color: #61dafb;
+}
+
+body.dark-mode #date {
+    color: #bbbbbb;
+}
+
+/* Dark Mode Enhancements */
+body.dark-mode {
+    background-color: #282c34;
+    color: #fff;
+}
+
+body.dark-mode .clock-container {
+    background-color: #282c34;
+    color: #61dafb;
+}
+
+body.dark-mode #date {
+    color: #61dafb;
+}
+
+/* Toggle Switch */
+.switch {
+    position: relative;
+    display: inline-flex;
+    width: 60px;
+    height: 34px;
+    margin-top: 20px;
+    margin-left: 10px;
+    float: right;
+}
+
+.switch input {
+    display: none;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #cccccc;
+    transition: 0.4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #61dafb;
+}
+
+input:checked + .slider:before {
+    transform: translateX(26px);
+}
+
+
+/* Clock Header */
+.clock-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
